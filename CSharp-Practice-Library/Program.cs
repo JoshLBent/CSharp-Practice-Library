@@ -21,7 +21,11 @@ namespace CSharp_Practice_Library
 
         private static void GetMenuOptions()
         {
-            string[] options = { "1) Crappy Calculator" };
+            string[] options = 
+            { 
+                "1) Crappy Calculator",
+                "2) Touchy Temp Converter"
+            };
 
             foreach (string option in options)
             {
@@ -40,6 +44,9 @@ namespace CSharp_Practice_Library
                     case 1:
                         Calculate.Calculator();
                         break;
+                    case 2:
+                        Calculate.TempCalc();
+                        break;
                     default:
                         MainMenu();
                         break;
@@ -55,7 +62,7 @@ namespace CSharp_Practice_Library
         {
             Console.Write("Would you like to return to the Main Menu? (Y/N) ");
             string input = Console.ReadLine().ToUpper();
-            if (input == "Y")
+            if (input == "Y" || input == "YES")
             {
                 MainMenu();
             }
