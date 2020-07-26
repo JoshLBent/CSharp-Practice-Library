@@ -9,7 +9,6 @@ namespace CSharp_Practice_Library
         public static void Calculator()
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Welcome to a Crappy Calculator!");
             bool calculateLoop = false;
             do
@@ -81,6 +80,7 @@ namespace CSharp_Practice_Library
                     calculateLoop = false;
                 }
             } while (!calculateLoop);
+            Program.ReturnHome();
         }
     }
 }

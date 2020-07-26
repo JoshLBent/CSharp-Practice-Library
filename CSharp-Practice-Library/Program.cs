@@ -2,16 +2,17 @@
 
 namespace CSharp_Practice_Library
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             MainMenu();
         }
 
-        private static void MainMenu()
+        public static void MainMenu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Welcome to Josh's C# Practice Library!\nFeel free to look around and check out one of the exercises below!");
             GetMenuOptions();
             Console.Write("Select an exercise? ");
@@ -47,6 +48,20 @@ namespace CSharp_Practice_Library
             else
             {
                 MainMenu();
+            }
+        }
+
+        public static void ReturnHome()
+        {
+            Console.Write("Would you like to return to the Main Menu? (Y/N) ");
+            string input = Console.ReadLine().ToUpper();
+            if (input == "Y")
+            {
+                MainMenu();
+            }
+            else
+            {
+                Environment.Exit(0);
             }
         }
     }
